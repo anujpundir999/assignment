@@ -4,6 +4,9 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import errorHandler from './middleware/errorHandler.js';
 import authRoutes from './routes/authRoutes.js';
+import employeeRoutes from './routes/employeeRoutes.js';
+import attendanceRoutes from './routes/attendanceRoutes.js';
+import dashboardRoutes from './routes/dashboardRoutes.js';
 
 dotenv.config();
 connectDB();
@@ -22,6 +25,9 @@ app.get('/health', (req, res) => {
 });
 
 app.use('/auth', authRoutes);
+app.use('/employees', employeeRoutes);
+app.use('/attendance', attendanceRoutes);
+app.use('/dashboard', dashboardRoutes);
 
 app.use(errorHandler);
 
