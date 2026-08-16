@@ -6,7 +6,10 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'HR Workspace',
-  description: 'Streamlined employee management, attendance tracking, and workforce analytics'
+  description: 'Streamlined employee management, attendance tracking, and workforce analytics',
+  icons: {
+    icon: '/icon.svg'
+  }
 };
 
 export default function RootLayout({ children }) {
